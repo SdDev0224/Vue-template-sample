@@ -1,5 +1,3 @@
-## Overview
+Vue Sample Code
 
-> Vue Sample Code
-
-To get this project, click [here](https://github.com/sddev0224/vue-contractor)
+For more details, click [here](https://github.com/sddev0224/vue-contractor)
