@@ -1,0 +1,120 @@
+form {
+  .column {
+    padding: 0.75rem 0.75rem 0;
+  }
+
+  .dropdown {
+    &.is-disabled {
+      opacity: 1;
+    }
+  }
+
+  fieldset {
+    border: none;
+
+    legend {
+      font-weight: 600;
+      font-size: 1rem;
+      padding-bottom: 1.5rem;
+    }
+
+    &:not(:first-child) {
+      legend {
+        padding-top: 2rem;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+
+  label {
+    // Necessary because Buefy overrides label weight.
+    // TODO: Investigate Buefy removal since the way it's designed hampers styling too much.
+    font-weight: $weight-medium !important;
+  }
+
+  input, select, textarea {
+    &[disabled] {
+      border-width: 1px;
+      border-style: solid;
+      border-color: #dbdbdb !important;
+    }
+  }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .select::after {
+    z-index: 0 !important;
+  }
+
+}
+
+.multiselect {
+    min-height: 36px !important;
+
+    &--disabled {
+      opacity: 1 !important;
+
+      .multiselect__tags,
+      .multiselect__tags *,
+      .multiselect__select {
+        color: #7a7a7a !important;
+        background-color: #f5f5f5 !important;
+      }
+    }
+
+    &__tags {
+      min-height: 36px !important;
+      padding: 6px 40px 0 8px !important;
+      border-radius: 0 !important;
+      border-color: $grey-lighter !important;
+    }
+
+    &__select {
+      height: calc(100% - 2px) !important;
+    }
+
+    .multiselect__content-wrapper {
+      // Prevent input hover from overrlapping the menu
+      z-index: 10 !important;
+    }
+    &--menu-hidden {
+      .multiselect__content-wrapper {
+        display: none !important;
+      }
+    }
+  }
+
+.select::after {
+ z-index: 0 !important;
+}
+
+
+@media screen and (max-width: 1300px) {
+  .column {
+    padding: 0.375rem;
+  }
+  .columns.input-change {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .b-checkbox.is-pulled-right {
+    float: none !important;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .flex span {
+    display: flex;
+  }
+}

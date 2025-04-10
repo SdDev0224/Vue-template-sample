@@ -1,0 +1,61 @@
+@import './variables';
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+body {
+  background-color: #F4F6FA;
+  // min-height: 100vh;
+}
+
+.section-box {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  padding: 2rem;
+
+  &__header {
+    padding: 0 0.75em;
+    margin-bottom: 1rem;
+  }
+}
+
+.waves-bg {
+  background-image: url("../assets/img/waves@2x.png"),
+    linear-gradient(to bottom right, #1badd9, #010a4f);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  color: $grey;
+
+  &__text {
+    margin-left: .5rem;
+  }
+
+
+  &__bullet {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    &--failure {
+      background-color: #D50000;
+    }
+
+    &--success {
+      background-color: #00C853;
+    }
+
+    &--neutral {
+      background-color: #FFD600
+    }
+  }
+}
+
+@import "./helpers";
+@import "./forms";
+@import "./table";

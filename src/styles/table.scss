@@ -1,0 +1,13 @@
+.table {
+  thead {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .flex {
+    display: flex;
+  }
+}

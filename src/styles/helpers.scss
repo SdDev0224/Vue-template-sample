@@ -1,0 +1,33 @@
+// Typography
+.serif {
+  font-family: 'Libre Baskerville', serif
+}
+
+// End typography
+
+.table{
+  .table-placeholder {
+    padding: 4.5rem 2rem;
+  }
+
+  tr.detail {
+    box-shadow: none !important;
+  }
+}
+
+// SPACING
+$default-spacing: 1rem;
+
+@mixin vertical-spacing($multiplier: 1) {
+  padding-top: $multiplier * $default-spacing
+}
+
+// Convenience class
+
+.v-spaced {
+  @include vertical-spacing;
+}
+
+.v-spaced-2 {
+  @include vertical-spacing(2);
+}
